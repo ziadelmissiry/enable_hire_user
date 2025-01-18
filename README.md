@@ -162,4 +162,84 @@ Considering the crucial role of specialized job platforms in enhancing employmen
 
 ## Screen Flow
 
+![Image](https://github.com/user-attachments/assets/ee7db420-fab9-4651-bda8-b5f7dcaefc49)
+
+Creating a traditional screen flow for an app this complicated will take a lot of time and effort so I created this using Canva to showcase the main differences between guest, employee, and employer accounts
+
+## Flow Description for Mobile Application
+
+**Guest Account**
+
+A guest lands on the Home Page, where they are greeted with featured jobs and a few basic filters. There is also a profile icon; clicking on it directs them to the Profile Page, which prompts them to log in. On the Home Page, guests have access to a disability button that enables features like color inversion, bold text, and inverse colors for enhanced accessibility.
+
+Guests can navigate to the Search Page, where a list of jobs appears along with a search bar at the top and a filter button. However, upon attempting to access the Job Page, guests are informed that they need to create an account to proceed. The Profile Page is similarly restrictive, asking guests to log in before they can access any detailed profile information or features.
+
+**Employee Account**
+
+An employee begins by logging in through the Sign In Page using their email and password, with an option to sign up if they don't have an account. Once logged in, employees can utilize the Search Page to find jobs, using various filters and a search bar to locate positions that match their criteria.
+
+When an employee selects a job, they are directed to the Job Selected Page, which displays the job description, company offerings, and an "Apply Now" button. Clicking this button allows the employee to apply for the job, which then appears on their Job Page under "My Jobs."
+
+Employees can manage their profile through the Profile Page, where they have options to log out, change their password, edit their profile, and update their resume.
+
+**Employer Account**
+
+An employer logs in via the Sign In Page with their email and password and has the option to sign up if needed. Once logged in, employers can manage their job listings on the Job Page, which displays a list of their posted jobs. They can use the "Create Job" button to add new listings, providing necessary details such as job title, description, requirements, and salary, etc.
+
+Each job listing shows details such as the job name, description, location, and the number of applicants. Employers can view applicants for each job and manage their job listings accordingly.
+
+Employers also have access to their profile through the Profile Page, where they can log out, change their password, edit their profile, and update company details.
+
+# Web 
+
+To extend the application to a wider audience, I have configured the app for the web. It is fully responsive, utilizing layout builders and widgets to ensure adaptability across different devices. To properly host the app I need to pay for the firebase blaze plan.
+
+To run the web version locally on your system, use the following command:
+
+```bash
+flutter run -d chrome --web-browser-flag "--disable-web-security"
+```
+
+## System Architecture
+
+The architecture can be divided into two main parts: the Client-Side (frontend) and the server side (backend). Firebase acts as a Backend-as-a-Service (BaaS), simplifying many server-side operations.
+
+**Client-Side (Frontend)**
+
+The Flutter user interface is built using reusable widgets these widgets are reusable across platforms.
+
+**Server-Side (Backend)**
+
+I’ve chosen Firebase services to handle the backend of the application, providing a reliable and scalable foundation for managing various aspects of the app's functionality. Firebase offers a comprehensive suite of tools that cover essential backend requirements such as data storage, user authentication, and media asset management.
+
+**Firebase Auth:-** firebase Authentication is a critical component of the application's backend, facilitating secure user authentication and account management. I’ve integrated Firebase Auth primarily to enable employees and employers to log in using their email and password credentials. This feature ensures that both employees and employers can access the app securely, with their authentication details encrypted and protected by Firebase's robust security measures.
+
+When an employee or employer signs up or logs in with their email and password, Firebase Authentication handles the authentication process seamlessly, verifying the user's credentials and granting access to the app's features and content. This simplifies the user experience, eliminating the need for complex authentication logic on the client side.
+
+In addition to user login, I’ve also implemented the functionality for users to change their passwords using Firebase Authentication. This feature allows both employee and employer to update their login credentials securely, enhancing account security and flexibility. Employees and Employers can edit password change requests through the app, and Firebase Authentication handles the process, ensuring that the new password is securely stored and encrypted.
+
+Firebase Authentication provides a straightforward API for implementing password change functionality, streamlining the development process, and ensuring a seamless user experience.
+
+**Firebase Firestore:-**
+
+Firebase Firestore serves as the backbone of the application's data management system, providing a powerful and scalable cloud-based database solution. I’ve leveraged Firestore extensively to store various types of data crucial for the application's functionality, including employee and employer profiles, company details, resumes, job listings, applicant lists, and more.
+
+One of the key advantages of Firestore is its real-time data synchronization capability, which allows changes made to the database to be immediately reflected across all connected devices. This real-time synchronization ensures that users always have access to the most up-to-date information, facilitating seamless collaboration and interaction within the application.
+
+For example, when an employer posts a new job listing, the changes are instantly propagated to all users accessing the app, ensuring that everyone has access to the latest information. Similarly, when an employee applies for a job, the relevant data is immediately updated in Firestore, enabling employers to review applications in real time.
+
+Firestore's flexible data model and powerful querying capabilities have enabled me to efficiently organize and retrieve data according to the application's needs. I can easily retrieve specific documents or collections of data, filter results based on various criteria, and perform complex queries to extract valuable insights from the data.
+
+I’ve Used Firestore to store critical information such as employee data, employer data, resumes, and company details. Each of these datasets is organized within Firestore collections, allowing for efficient storage and retrieval of data.
+
+To differentiate between employees and employers, I’ve introduced a boolean attribute named "isRecruiter" within the user documents stored in Firestore. This attribute indicates whether the user is an employee or an employer, enabling me to tailor the app's functionality accordingly.
+
+Moreover, I’ve stored a list of job postings within Firestore, allowing employers to publish job opportunities and employees to browse available positions. Each job posting is represented as a document within a Firestore collection, containing relevant details such as job title, description, requirements, and contact information.
+
+To associate job postings with specific companies, I’ve utilized unique identifiers (UUIDs) or other company-specific identifiers within the job documents. This enables me to efficiently retrieve job postings associated with a particular company, facilitating streamlined job search functionality within the app.
+
+Overall, Firebase Firestore serves as the backbone of the application's data management, providing a flexible and scalable solution for storing and querying employee, employer, and job-related data. By leveraging Firestore's capabilities, I can ensure data consistency, reliability, and performance, ultimately delivering a seamless and efficient user experience.
+
+**User-**
+
 
