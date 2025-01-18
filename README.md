@@ -220,7 +220,7 @@ In addition to user login, I’ve also implemented the functionality for users t
 
 Firebase Authentication provides a straightforward API for implementing password change functionality, streamlining the development process, and ensuring a seamless user experience.
 
-**Firebase Firestore:-**
+**Firebase Firestore:**
 
 Firebase Firestore serves as the backbone of the application's data management system, providing a powerful and scalable cloud-based database solution. I’ve leveraged Firestore extensively to store various types of data crucial for the application's functionality, including employee and employer profiles, company details, resumes, job listings, applicant lists, and more.
 
@@ -240,6 +240,190 @@ To associate job postings with specific companies, I’ve utilized unique identi
 
 Overall, Firebase Firestore serves as the backbone of the application's data management, providing a flexible and scalable solution for storing and querying employee, employer, and job-related data. By leveraging Firestore's capabilities, I can ensure data consistency, reliability, and performance, ultimately delivering a seamless and efficient user experience.
 
-**User-**
+**User:**
+<img width="468" alt="Image" src="https://github.com/user-attachments/assets/ee04a4d9-b96c-4cf8-991c-0be6cd1d4886" />
+
+**Jobs:**
+<img width="468" alt="Image" src="https://github.com/user-attachments/assets/91ecf433-49fb-497d-924b-3f3fea5f430c" />
+
+**Firebase_Storage:-** Firebase Storage serves as the central repository for managing media assets within the application, including profile pictures for employees and employers, as well as company logos. I’ve utilized Firebase Storage to securely upload, store, and serve these media files, ensuring reliable access and optimal performance for the users.
+
+One of the key benefits of Firebase Storage is its scalability and reliability, which allows me to store large volumes of media assets without worrying about storage limitations or performance issues. This ensures that users can upload and access their profile pictures and company logos seamlessly, regardless of the size or number of files.
+
+Additionally, Firebase Storage integrates seamlessly with other Firebase services, such as Firebase Authentication and Firestore, allowing me to associate media assets with specific user accounts or database records. This enables me to maintain consistency and integrity across the application's data and media content.
+
+Furthermore, Firebase Storage provides robust security features to protect media assets from unauthorized access or tampering. Access to stored files can be restricted based on user authentication credentials or specific access rules defined by the application, ensuring that only authorized users can access or modify media files.
+
+By leveraging Firebase Storage for managing media assets, I ensure a reliable and scalable solution for storing and serving profile pictures, company logos, and other media content within the application. This enhances the user experience by providing seamless access to visual assets while maintaining the integrity and security of the data.
+
+## Libraries used
+
+**Flutter_riverpod:** A state management library for Flutter that provides a simpler way to manage application state and dependency injection.
+
+For this project, I adopted Flutter Riverpod as my state management solution. While there are several other alternatives available, such as GetX and Bloc, each with its strengths, I found that Riverpod best suited my needs. I have used it in authentication showing the loading to the screens and also for managing different disability features. By using Riverpod I was able to update all the pages together when I activated any disability features,
+
+1. **Flutter Riverpod**:
+    - **Choice Rationale**: Riverpod provides a balance between performance and scalability, making it an excellent fit for medium-sized projects.
+    - **Community Recommendation**: Although GetX is known for its speed, it's not widely recommended by the Flutter community. On the other hand, Bloc is often preferred for larger projects due to its architecture, but for my project's scale, Riverpod emerged as the more suitable option.
+    - **Flexibility**: Riverpod offers a high degree of flexibility, allowing me to efficiently manage state and dependencies within the application.
+
+**Other Considerations**:
+
+- - **GetX**: While GetX boasts impressive speed, it didn't align with the broader Flutter community's recommendations for the project's needs.
+    - **Bloc**: Bloc is a robust solution, ideal for complex applications. However, given the size and scope of the project, it would have introduced unnecessary complexity.
+
+**Gap**: In the project, I’ve integrated the Gap package, a utility tool designed to simplify the process of adding spacing between widgets in Flutter. While traditional methods like using sized box widgets can achieve similar results, Gap streamlines the process by providing an intuitive way to insert vertical or horizontal space between two widgets with minimal effort. This not only saves development time but also enhances code readability and promotes consistency in spacing throughout the application. By leveraging the Gap package, I ensure a more efficient and maintainable approach to managing widget spacing in the project.
+
+**Responsive_sizer:** In the development process, I’ve integrated the Responsive_sizer package, a valuable tool designed to streamline the creation of responsive layouts in the applications. This package facilitates the utilization of percentages of screen height and width for sizing elements, making it significantly easier to ensure that the app's layout adapts seamlessly to various screen sizes and resolutions. By leveraging Responsive_sizer, I able to create responsive designs that maintain visual consistency and user experience across different devices, enhancing the overall accessibility and usability of the application. This package plays a crucial role in simplifying the implementation of responsive design principles, ultimately contributing to the creation of a more polished and user-friendly app.
+
+**Go_router:** A declarative routing package for Flutter that uses the Router API to provide a convenient, url-based API. It provides a very easy way to navigate through the pages and it also solves so many issues that I face during the normal navigation system of flutter go router solves all of them.
+
+**Lottie:** I have integrated the Lottie package into the app to show more animations.
+
+**Flutter_staggered_grid_view:** In the project, I’ve integrated the Flutter_staggered_grid_view library, a versatile tool that empowers me to create staggered grid layouts with ease. This library offers robust support for displaying content in a grid format with multiple columns of varying sizes, allowing for dynamic and visually appealing arrangements of widgets. Unlike traditional grid views, which enforce a uniform size for all grid elements, Flutter_staggered_grid_view enables me to customize the size of individual grid items, thereby facilitating more creative and flexible layouts. This flexibility is particularly valuable when presenting content such as images or cards of different dimensions, as it allows me to optimize screen real estate and enhance the overall aesthetic appeal of the application. By leveraging Flutter_staggered_grid_view, I can deliver visually striking and engaging user interfaces that effectively showcase the content in a dynamic and organized manner. I have used it on different pages of the application like on the create resume screen where you can see the job functions and other options in this staggered view
+
+**Flutter_lorem:** While testing the application I needed some dummy tests and copying the text again and again can be a time-consuming task therefore I have integrated flutter_lorem in the application, it generates lorem ipsum text.
+
+**Readmore:** The Readmore Flutter plugin is an essential component integrated into the application, offering convenient functionality for expanding and collapsing text content. This plugin significantly enhances user experience by providing users with the ability to toggle between displaying a shorter version of the text and expanding it to reveal the full content. Moreover, Readmore goes beyond basic expand/collapse functionality by offering advanced features such as customizable styling options. With Read More, I have the flexibility to tailor the appearance of the expanded and collapsed text, ensuring consistency with the application's design language and branding. This plugin streamlines the implementation of interactive text elements, allowing me to present lengthy content in a concise and user-friendly manner. By leveraging Readmore, I create a more engaging and accessible experience for the users, empowering them to interact with text content effortlessly while maintaining visual coherence and consistency within the application. Mainly I have used this package on the job details screen where in the job description user can read the short description and if the user wants to see the whole description, the user can click on read more,
+
+**Carousel_slider:** The Carousel_slider Flutter plugin is an indispensable tool integrated into the application, providing seamless functionality for creating captivating slideshows of images. This plugin enabled me to enhance user engagement by presenting images dynamically and interactively, allowing users to navigate through a series of pictures with ease. With Carousel_slider, I can effortlessly implement features such as automatic slide transitions, swipe gestures for navigation, and customizable slide animations, thereby enriching the visual experience for the users. Whether showcasing product images, portfolio items, or multimedia content, Carousel_slider empowers me to create compelling visual presentations that capture attention and leave a lasting impression. By leveraging this plugin, I can effectively communicate messages and showcase content in a visually appealing and engaging format, enhancing the overall user experience of the application. I have mainly used it in the home screen of the application to show the images slideshows at the top
+
+**Cached_network_image:** The Carousel_slider Flutter plugin is an indispensable tool integrated into the application, providing seamless functionality for creating captivating slideshows of images. This plugin enables me to enhance user engagement by presenting images dynamically and interactively, allowing users to navigate through a series of pictures with ease. With Carousel_slider, I can effortlessly implement features such as automatic slide transitions, swipe gestures for navigation, and customizable slide animations, thereby enriching the visual experience for the users. Whether showcasing product images, portfolio items, or multimedia content, Carousel_slider empowers me to create compelling visual presentations that capture attention and leave a lasting impression. By leveraging this plugin, I can effectively communicate messages and showcase content in a visually appealing and engaging format, enhancing the overall user experience of the application. I have used this in almost all the pages where I have to show the networking images.
+
+**Shimmer:** The Shimmer package is a valuable addition to the application, offering a simple yet effective solution for enhancing the user experience through shimmer’s loading effect placeholders. This package allows me to incorporate visually engaging placeholders that mimic the shimmering effect seen during data loading, providing users with immediate feedback and a sense of activity. By seamlessly integrating shimmer placeholders into the application, I create a more polished and responsive interface that keeps users engaged while content is being fetched or processed. Additionally, Shimmer offers customization options, enabling me to tailor the appearance and behavior of the placeholders to match the application's design language and branding. Overall, Shimmer significantly enhances the perceived performance of the application by improving user feedback during loading operations, ultimately contributing to a more satisfying and immersive user experience. I have used it for loading the images from the network and while loading the jobs as well,
+
+**Modal_progress_hud_nsn**: The Modal_progress_hud_nsn package is a crucial part of the application, providing a convenient solution for displaying modal progress indicators with null safety support. This package enables me to seamlessly integrate a modal Heads Up Display (HUD) that informs users of ongoing background processes or loading operations within the application. With null safety compatibility, Modal_progress_hud_nsn ensures robust and reliable behavior, reducing the risk of runtime errors and enhancing overall stability. By incorporating this package, I can effectively communicate to users that the application is actively processing tasks while preventing unintended user interactions. Additionally, Modal_progress_hud_nsn offers customization options, allowing me to tailor the appearance and behavior of the progress indicator to align with the application's design aesthetics. Overall, Modal_progress_hud_nsn enhances the user experience by providing clear visual feedback during background processes, contributing to a more intuitive and responsive application interface. I have used it in all the authentication screens, created a resume, and created a company screen, so till the data is saved to the Firebase, I will see the loading using this package.
+
+**Image_picker:** The Image_picker package serves as a valuable asset in the application, facilitating the seamless selection of images from the device's gallery or camera. This functionality is particularly useful for implementing image upload features, allowing users to easily choose photos or capture new ones to include in their interactions within the application. By integrating Image_picker, I streamline the process of accessing and incorporating visual content, enhancing user engagement and interaction possibilities. Whether users need to upload profile pictures, share images within social features, or attach photos to messages, this package offers a straightforward solution that ensures a smooth and intuitive experience. Furthermore, Image_picker provides robust support for both iOS and Android platforms, ensuring consistent behavior across different devices and operating systems. Overall, Image_picker significantly enriches the functionality of the application by enabling seamless image selection and upload capabilities, ultimately contributing to a more immersive and dynamic user experience. I have used it in the registration screen and created a company screen for uploading the images
+
+**Shared_preferences:** The Shared_preferences package is a fundamental component integrated into the application, offering a convenient and platform-independent solution for managing persistent data storage. This package simplifies the process of storing and retrieving simple data across various platforms, including iOS, macOS, and Android, by wrapping platform-specific persistent storage mechanisms such as NSUserDefaults on iOS/macOS and SharedPreferences on Android. By leveraging Shared_preferences, I can efficiently store small amounts of data, such as user preferences, settings, or authentication tokens, ensuring that this information persists between application sessions. This persistent storage capability enhances user experience by maintaining continuity and personalization across different interactions with the application. Moreover, Shared_preferences provides a straightforward API for accessing stored data, making it easy to integrate into the application's logic and workflows. Overall, Shared_preferences plays a crucial role in enabling seamless data persistence across platforms, contributing to a more robust and user-friendly Flutter application. In the application, I have used it for persisting the user state so once the user is login he doesn't have to log in again and again,
+
+**firebase_core:-** The Firebase Core package is like the starting point of the app's connection with Firebase. It helps set up Firebase services smoothly, making it easy to use features like saving data, user authentication, and messaging across different devices. With Firebase Core, I can quickly get the app connected to Firebase's powerful tools without a hassle, making it simpler to build real-time, user-friendly apps.
+
+**firebase_auth:-** The Firebase Auth package is a key part of the app's authentication system. It lets users sign in securely using methods like email/password, phone number, or social media accounts. With Firebase Auth, I can easily manage user authentication, making it simple to build apps that keep users' accounts safe and accessible.
+
+**firebase_firestore:**\- The Firebase Firestore package is an essential tool for the application, enabling seamless integration with Firebase's cloud-based NoSQL database. With Firestore, I can store and synchronize data in real time across multiple devices and platforms, making it easy to build collaborative and responsive applications.
+
+**firebase_storage**:- Firebase Storage is a crucial component in the application, serving as the dedicated storage solution for assets like profile pictures and company logos. With Firebase Storage, I securely upload, download, and manage media files such as images, videos, and documents.
+
+## Design patterns
+
+In the application Design pattern, I’ve implemented the repository pattern to efficiently manage data operations and separate business logic from user interface concerns. The primary repository, auth_repo, serves as the central hub for handling various functionalities related to user authentication, user creation (both employees and employers), company data management, resume handling, as well as login and logout processes. By consolidating these operations within a single repository, I ensure a clear separation of concerns and maintainability in the codebase.
+
+Within the project structure, the repository pattern enables me to organize the code into distinct layers. In the view folder, I house all user interface components such as login_page, which focuses solely on presenting the user interface to the user. This separation allows for a clean and modular design, making it easier to maintain and update the user interface independently of the underlying data logic.
+
+In the models folder, I define all the data models used throughout the application, such as user_model. These models encapsulate the structure and behavior of the data entities, providing a clear representation of the data consumed and manipulated by the application.
+
+By adopting the repository pattern and organizing the codebase into separate layers, I enhance code readability, scalability, and maintainability. This architectural approach fosters a modular and flexible design, making it easier to extend and evolve the application over time. Additionally, it promotes code reuse and facilitates collaboration if I have other team members working on different aspects of the application.
+
+## Technical Challenges
+
+**1-User Role Persistence Challenge and Solution: -**
+
+**Description:**
+
+One of the significant technical challenges I encountered during the development of the application was ensuring a seamless transition between user roles upon re-logging into the application. Specifically, when a user logged in as an employer and then quit the application, subsequent logins would often default the user to the employee screens instead of retaining the employer role.
+
+**Solution:**
+
+To address this challenge, the integration of shared preferences proved to be a great choice. By leveraging shared preferences, the application could save crucial user role information such as 'isEmployee' or 'isEmployer'. A logical mechanism was implemented to ensure mutual exclusivity between these roles, wherein if one role was set to true, the other would automatically be set to false. This ensured that upon re-launching the application, users were redirected to their respective role screens based on the saved preferences.
+
+By implementing this solution, the application achieved enhanced user experience and eliminated the inconvenience of users being redirected to unintended screens upon re-logging in.
+
+**2- Addressing UI Challenges with Color Inversion and Contrast ➖**
+
+**Description-**
+
+Another technical challenge encountered in the project was related to the simultaneous activation of color inversion and contrast settings. When both options were enabled together, it caused usability issues within the user interface.
+
+**Solution:-** To resolve this issue, a conditional logic was implemented to ensure mutual exclusivity between color inversion and contrast settings. When one option was turned on, the other was automatically disabled, and vice versa. Specifically, if the user chose to enable color inversion, the contrast setting was automatically toggled off, and conversely, if contrast was activated, color inversion was disabled.
+
+By implementing this solution, the application ensured a more consistent and user-friendly UI experience, mitigating any potential conflicts arising from the simultaneous activation of color inversion and contrast settings.
+
+This adjustment contributed to improved accessibility and usability for users interacting with the application's interface.
+
+**3- Complex Job Filtering Logic during Search:-**
+
+**Description:-** A significant technical hurdle I encountered during the development process involved managing the complexity of job filtering logic during search operations. The multitude of conditions required for effective job filtering posed a challenge in terms of efficiency and maintainability.
+
+**Solution**:- To address this challenge, a systematic approach was adopted, leveraging the capabilities of Firebase queries. Instead of relying on a single, cumbersome filtering process, the solution involved creating distinct Firebase queries tailored to specific filtering criteria. By breaking down the filtering conditions into separate queries, each query could efficiently handle a subset of filtering criteria, thereby optimizing the search process. This modular approach not only improved the performance of job filtering but also enhanced the maintainability of the codebase by isolating and encapsulating individual filtering functionalities. Additionally, by utilizing Firebase's real-time database capabilities, the application could dynamically adjust the query parameters based on user inputs, ensuring that search results remained relevant and up-to-date. This implementation optimized Firebase queries significantly and streamlined the job filtering process, resulting in a more responsive and user-friendly search experience for the application's users.
+
+# Testing
+
+## Self Testing
+
+| Test # | Scenario | Expected Result | Actual Result | Pass / Fail |
+| --- | --- | --- | --- | --- |
+| 1   | Log in as an employee | Being redirected to the home screen with the name next to the profile icon | As Expected | Pass |
+| --- | --- | --- | --- | --- |
+| 2   | Log in as an employer | Being redirected to the home screen with the company name next to the profile icon | As Expected | pass |
+| --- | --- | --- | --- | --- |
+| 3   | Creating an account as an employee | An account is created and the user can log in after logging out | As Expected | Pass |
+| --- | --- | --- | --- | --- |
+| 4   | Creating an account as an employer | An account is created and the user can log in after logging out | As Expected | pass |
+| --- | --- | --- | --- | --- |
+| 5   | Guest navigation | Being able to navigate the app as a guest includes searching for jobs and looking threw the home page | As Expected | pass |
+| --- | --- | --- | --- | --- |
+| 6   | Searching | Searching threw jobs by typing the job title | As expected | pass |
+| --- | --- | --- | --- | --- |
+| 7   | Create job | Create a job from an employer account that appears for an employee account | As Expected | Pass |
+| --- | --- | --- | --- | --- |
+| 8   | View applicant | When an employee applies for a job the employer gets a notification | As expected | Pass |
+| --- | --- | --- | --- | --- |
+| 9   | Apply | When an employee applies for a job the employer gets the resume | As expected | Pass |
+| --- | --- | --- | --- | --- |
+| 10  | My resume btn | Users can edit their resumes and the changes will save | As Expected | Pass |
+| --- | --- | --- | --- | --- |
+| 11  | My company btn | User can edit their company details and it will save | As Expected | Pass |
+| --- | --- | --- | --- | --- |
+| 12  | View job | When an employee clicks on a job they can see all the job details. | As Expected | Pass |
+| --- | --- | --- | --- | --- |
+| 13  | Disability btn: text size | When a user uses the drag bar to increase or decrease text size it stays that way until they decide to change it | As Expected | Pass |
+| --- | --- | --- | --- | --- |
+| 14  | Disability btn: color inversion | When the user clicks on color inversion the color of the widgets and other elements on the screen get inverted. | As Expected | Pass |
+| --- | --- | --- | --- | --- |
+| 15  | Disability btn: color contrast | When the user clicks on color contrast the the widgets and other elements on the screen change to a darker contrast | As Expected | Pass |
+| --- | --- | --- | --- | --- |
+| 16  | Disability btn: bold text | When the user clicks on the btn the text on the screen becomes bold | As Expected | Pass |
+| --- | --- | --- | --- | --- |
+| 18  | Screen reader | If someone does to accessibility settings on phone settings and enables a screen reader they can use it effectively | It works but it can’t read pictures | Fail |
+| --- | --- | --- | --- | --- |
+
+# Critical Review
+
+The current functionality of my application, encompassing profile creation, job posting, application submission, and applicant viewing, lays a solid foundation. However, there are notable areas where efficiency can be significantly enhanced. Currently, the lack of direct communication between employers and employees presents a notable hurdle. Introducing a chat feature within the application would bridge this gap, facilitating real-time communication and streamlining the hiring process. Employers would gain the ability to ask questions, provide additional job details, schedule interviews, and discuss requirements directly with potential candidates, thus fostering better engagement and reducing communication delays.
+
+Additionally, the absence of in-app job application decisions forces employers to step outside the application, creating a disjointed experience. Enabling employers to make application decisions directly within the app interface—whether accepting or rejecting applications—would streamline the hiring process, offering a cohesive user experience and allowing for prompt feedback to candidates.
+
+Furthermore, by allowing employees to create multiple resumes within the application, the platform becomes more user-friendly and adaptable. This feature empowers job seekers to tailor their resumes to specific job roles or industries, highlighting relevant skills and experiences for each application. By addressing these aspects—implementing a chat feature, enabling in-app application decisions, and allowing for multi-resume creation—I believe my application would solidify its position as a comprehensive recruitment tool, fostering efficient communication, streamlined processes, and enhanced user customization options for both employers and job seekers.
+
+# Project Screenshots:
+
+## Webs 
+
+![Image](https://github.com/user-attachments/assets/a4eb9900-34d2-433e-b529-eca71d9a99b8)
+
+![Image](https://github.com/user-attachments/assets/150b83ea-3631-4586-92ce-379523463e6e)
+
+## App (android):
+
+<img width="111" alt="Image" src="https://github.com/user-attachments/assets/b278edd7-8d8a-4004-91d4-7512194d7363" />
+
+<img width="114" alt="Image" src="https://github.com/user-attachments/assets/90a6635b-4459-4506-855c-b21a42ae2e54" />
+
+<img width="93" alt="Image" src="https://github.com/user-attachments/assets/18a7e8b7-467d-4916-a7e7-509669f4a923" />
+
+
+## App (ios): 
+
+![Image](https://github.com/user-attachments/assets/5c13f9e5-14b8-4474-8761-36f2025ed5ff)
+
+![Image](https://github.com/user-attachments/assets/8196b900-f78c-421f-a458-e09e2027911c)
+
+
+
+
+
+
 
 
